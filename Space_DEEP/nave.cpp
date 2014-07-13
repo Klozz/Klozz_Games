@@ -1,9 +1,8 @@
 /* Naves GAME
- * Autor: Carlos Jesús AKA KLOZZ <TeamMEX@XDA>
+ * Autor: Carlos Jesï¿½s AKA KLOZZ <TeamMEX@XDA>
  *
  * V1.0
  *
- * V1.5 Fixed problema de la ventana ahora se auto incrementa el tamaño de la ventana ;)
  *
  */
 #include<stdio.h>
@@ -34,12 +33,12 @@ void gotoxy(int x, int y){
 
 }
 
-//Eliminamos el cursor de la ventana de ejecución.
+//Eliminamos el cursor de la ventana de ejecuciï¿½n.
 void OcultarCursor(){
     HANDLE hCon;
     hCon = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_CURSOR_INFO cci;
-    cci.dwSize = 1; //Obtendra valores desde 1 hasta 100 máximo
+    cci.dwSize = 1; //Obtendra valores desde 1 hasta 100 mï¿½ximo
     cci.bVisible = FALSE;//Puede obtener falso o verdadero(falso no se muestrea)
 
     SetConsoleCursorInfo(hCon,&cci);
@@ -145,13 +144,13 @@ void NAVE::pintar_corazones(){
 }
 void NAVE::explosion(){//Animacion de explosion :3
         borrar();
-        gotoxy(x,y);printf("    **   ");//Animacion de exploción
+        gotoxy(x,y);printf("    **   ");//Animacion de explociï¿½n
         gotoxy(x,y+1);printf("  ****   ");
         gotoxy(x,y+2);printf("   **   ");
         Sleep(200);
 
         borrar();
-        gotoxy(x,y);printf(" *  **  * ");//Animacion de exploción
+        gotoxy(x,y);printf(" *  **  * ");//Animacion de explociï¿½n
         gotoxy(x,y+1);printf("  ****  ");
         gotoxy(x,y+2);printf(" *  **  *");
         Sleep(200);
@@ -323,7 +322,7 @@ int main(){
         if(N.BID() == 0) game_over = true;
          N.muerte();
          N.mover();
-         Sleep(30); //Detener la ejecución por 30ms para evitar se ejecute muchas veces y haya menos gasto de memoria
+         Sleep(30); //Detener la ejecuciï¿½n por 30ms para evitar se ejecute muchas veces y haya menos gasto de memoria
     }
     system("cls");
     printf("Has perdido :) espero hayas disfrutado este juego...\nUn saludo de parte de el desarrollador\n");
